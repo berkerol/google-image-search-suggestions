@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Google Image Search Suggestions</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script async src="https://kit.fontawesome.com/a1c4b21e48.js"></script>
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-4">
+      <h1>Google Image Search Suggestions</h1>
+    </div>
+    <div class="row justify-content-center mt-5 mb-2">
+      <div class="col-6">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+          </div>
+          <input type="text" class="form-control" placeholder="Search" id="search-input" autofocus />
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="search()">Search</button>
+    </div>
+    <div class="row justify-content-center" id="gallery">
+    </div>
+  </div>
+</body>
+
+</html>
