@@ -1,6 +1,6 @@
-const express = require("express");
-const helmet = require("helmet");
-const puppeteer = require("puppeteer");
+const express = require('express');
+const helmet = require('helmet');
+const puppeteer = require('puppeteer');
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.get('/search', async (req, res) => {
       const items = await search(req.query.q);
       res.status(200).json(items);
     } catch (e) {
-      res.status(500).send(e);
+      res.status(500).send(e.message);
     }
   } else {
     res.status(500).send('Wrong query string parameter');
@@ -31,7 +31,7 @@ const search = async query => {
   const page = await browser.newPage();
 
   await page.setRequestInterception(true);
-  page.on('request', (request) => {
+  page.on('request', request => {
     if (request.resourceType() === 'document' || request.url().startsWith('https://www.gstatic.com')) {
       request.continue();
     } else {
