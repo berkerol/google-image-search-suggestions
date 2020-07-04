@@ -15,6 +15,6 @@
     "express": "^4.17.1",
     "forever": "^2.0.0",
     "helmet": "^3.22.0",
-    "puppeteer": "^2.1.1"
+    "puppeteer": "^5.0.0"
   }
 }
